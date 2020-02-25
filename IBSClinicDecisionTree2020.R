@@ -14,13 +14,4 @@ Model3<-rpart(Subject~BAABBB+BAABBBa+BACCCCa+BBBBBB+BBBBBBo+BBBBBBu+BBBBPPc+BBBB
             +BFCCRRs+BFCCRRb+BFCCRRc+BFCCVA+BFCCVD+BFCCVM+BFCCVP+BFCCVVd+BFCCM+BFEEEC+BFEEEEb
             +BPDDDB+BPGEE+BVVVVAm+Age+HFCS,data=train1,method="class")
 Model3
-rpart.plot(Model3)
-#Testing Accuracy
-x_test<-train1[,1:4]
-y_test<-validate1[,5]
-predictions<-predict(Model3,x_test)
-#oooo
-predict1<-predict(Model3,train1)
-mode(predict1) = "numeric"
-data.frame(predict1)
-confusionMatrix(predict1,train1$Subject)
+
